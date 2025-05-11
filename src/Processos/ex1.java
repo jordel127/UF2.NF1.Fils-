@@ -1,13 +1,18 @@
 package Processos;
 
+import java.sql.Connection;
+
 public class ex1 {
     public static void main(String[] args) throws InterruptedException {
         Monitor monitor = new Monitor();
         filLectura fil1 = new filLectura("filX", monitor);
         filLectura fil2 = new filLectura("filY", monitor);
 
-        fil1.start();
-        fil2.start();
+        BD db = new BD();
+        db.mostrarRegistres();
+
+//        fil1.start();
+//        fil2.start();
 
     }
 }
